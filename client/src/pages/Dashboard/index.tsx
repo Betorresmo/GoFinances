@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from 'react';
 
-import { format } from 'path';
 import income from '../../assets/income.svg';
 import outcome from '../../assets/outcome.svg';
 import total from '../../assets/total.svg';
@@ -58,12 +57,15 @@ const Dashboard: React.FC = () => {
         outcome: formatValue(apiBalance.outcome),
         total: formatValue(apiBalance.total),
       };
+
       setTransactions(formattedTransactions);
       setBalance(formattedBalance);
     }
 
     loadTransactions();
   }, []);
+
+  console.log(transactions);
 
   return (
     <>

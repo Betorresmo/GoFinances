@@ -33,6 +33,7 @@ const Import: React.FC = () => {
           'Content-Type': 'multipart/form-data',
         },
       });
+      history.push('/');
     } catch (err) {
       console.log(err.response.error);
     }
