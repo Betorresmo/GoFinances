@@ -11,58 +11,62 @@
 
 <img alt="GoMarketplace" title="#GoMarketplace" src="./github/GoFinances-preview.gif" width="100%" />
 
-The main goal of this project was to deal with the addition and removal of items to the cart, as well as storing information with [Async Storage](https://github.com/react-native-community/async-storage). A fake api built with [JSON Server](https://github.com/typicode/json-server) was utilized to request the data for the produtcs to be shown.
+The goal of this project is to manage financial transactions imported from external sources, as a ```.csv``` sheet.
 
 ### User can:
-- Add products to the cart
-- See how many items are in the cart
-- See the total cost of all the products in the cart
-- Navigate to the cart
-- Add & Remove items in the cart
+- Navigate between the dashboard and import pages
+- Import financial transactions in ```.csv``` files
+- See the title, value, category and date of the imported trasactions
+- See the total income, expenses and balance
 
-More products can be added just by modifying ``server.json`` file.
+Example ```.csv``` files can be found in the ```github``` folder.
 
 ## 🎈 Getting Started
 
-You need an Android or IOS emulator configured to run the application. In the example above, [Android Studio Emulator](https://developer.android.com/studio/?gclid=CjwKCAjw5Ij2BRBdEiwA0Frc9VE3X071s04qoOVMCf79a4DnB5or3Lq3Df1cIKLHxFYnuBC9C7SVBxoCnKoQAvD_BwE&gclsrc=aw.ds) was used to emulate Pixel 3 XL.
+You'll need [Docker](https://www.docker.com/) container configured with a [Posgres](https://www.postgresql.org/) image to run the server.
 
-### Using a fake API
-
-In ``package.json`` there's the dependency ``json-server`` and a ``server.json`` file which has the products' data to the route ``/products``. To execute the server the following command is required:
-```js
-yarn json-server server.json -p 3333
-```
-
-
-### Installation
-
-1. Clone the repo
+Clone the repo
 ```sh
 git clone https://github.com/Betorresmo/GoMarketplace.git
 ```
-2. Install yarn packages
+Install yarn packages
 ```sh
 yarn install
 ```
-3. Run Metro Bundler
-```sh
+
+### Client
+
+1. Running
+```
 yarn start
 ```
-4. Build the application
+
+### Server
+
+1. Start Docker container
 ```sh
-yarn android
+docker start container-name :port
 ```
-or
+2. Start the server
 ```sh
-yarn ios
+yarn dev:server
 ```
 
 ## 💻 Technologies
 
-- [React Native](https://reactnative.dev/) 
 - [TypeScript](https://github.com/microsoft/TypeScript)
+
+### Client
+- [React](https://reactjs.org/) 
 - [Axios](https://github.com/axios/axios) 
-- [Async Storage](https://github.com/react-native-community/async-storage)
-- [JSON Server](https://github.com/typicode/json-server)
+- [Styled Components](https://styled-components.com/)
+
+### Server
+- [PostgreSQL](https://www.postgresql.org/)
+- [Docker]()
+- [TypeORM](https://typeorm.io/#/)
+- [Express](https://expressjs.com/)
+- [JestJS](https://jestjs.io/)
+
 
 ## 📬 [Contact me](https://www.linkedin.com/in/guerrero-roberto/)
