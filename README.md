@@ -66,7 +66,6 @@ yarn dev:server
 - [Docker]()
 - [TypeORM](https://typeorm.io/#/)
 - [Express](https://expressjs.com/)
-- [JestJS](https://jestjs.io/)
 
 
 ## 📬 [Contact me](https://www.linkedin.com/in/guerrero-roberto/)
