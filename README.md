@@ -27,7 +27,7 @@ You'll need [Docker](https://www.docker.com/) container configured with a [Posgr
 
 Clone the repo
 ```sh
-git clone https://github.com/Betorresmo/GoMarketplace.git
+git clone https://github.com/Betorresmo/GoFinances.git
 ```
 Install yarn packages
 ```sh
